@@ -2,14 +2,21 @@
     width: 100%;
     &__hero{
         display: flex;
-        
+        margin-top: 55px;
     }
     &__left{
         width: 25%;
-        background-color: red;
+        height: 79vh;
+        position: fixed;
     }
     &__right{
-        width: 75%;
-        background-color: violet;
+        width: 73.5%;
+        height: 79vh;
+        overflow: scroll;
+        overflow-x: hidden;
+        margin-left: auto;
     }
+}
+::-webkit-scrollbar{
+    width: 0;
 }

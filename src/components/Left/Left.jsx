@@ -1,18 +1,16 @@
 import React from "react";
-import './Left.scss'
+import "./Left.scss";
 
 const Left = () => {
-    return (
-        <>
-            <div className="left">
-                <div className="container-fluid">
-                    <div className="left__hero">
-                        hello
-                    </div>
-                </div>
-            </div>
-        </>
-    );
+  return (
+    <>
+      <div className="left">
+        <div className="container-fluid">
+          <div className="left__hero"></div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Left;
