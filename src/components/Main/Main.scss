@@ -1,0 +1,15 @@
+.main{
+    width: 100%;
+    &__hero{
+        display: flex;
+        
+    }
+    &__left{
+        width: 25%;
+        background-color: red;
+    }
+    &__right{
+        width: 75%;
+        background-color: violet;
+    }
+}
