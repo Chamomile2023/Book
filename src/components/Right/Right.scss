@@ -1,0 +1,88 @@
+.right{
+    width: 100%;
+    &__hero{
+        width: 100%;
+        height: 79vh;
+        overflow: scroll;
+        position: relative;
+        background-color: #F8FAFD;
+    }
+    &__cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+    }
+    &__card{
+        width: 282px;
+        height: 431px;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 15px 18px;
+        margin: 10px 0;
+        &--book{
+            width: 220px;
+            height: 238px;
+            background: #F8FAFD;
+            border-radius: 5px;
+            padding: 18px 30px;
+        }
+        &--title{
+            width: 64px;
+            height: 21px;
+            overflow: hidden;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: #000000;
+            padding-top: 20px;
+        }
+        &--name{
+            width: 105px;
+            height: 18px;
+            overflow: hidden;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 18px;
+            color: #757881;
+        }
+    }
+    &__buttons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: absolute;
+        // bottom: 5px;
+        &--one{
+            width: 125px;
+            height: 37px;
+            background: #FFD80D;
+            border-radius: 4px;
+            border: none;
+            color: #000000;
+            font-weight: bold;
+            &:hover{
+                background-color: #fbeb9e;
+            }
+        }
+        &--two{
+            width: 125px;
+            height: 37px;
+            background: rgba(13, 117, 255, 0.05);
+            border-radius: 4px;
+            border: none;
+            color:  rgba(13, 117, 255, 1);
+            font-weight: bold;
+        }
+        &--three{
+            width: 100%;
+            height: 37px;
+            background: #75828A;
+            border-radius: 4px;
+            border: none;
+            margin: 5px 0;
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+}
