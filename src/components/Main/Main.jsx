@@ -13,7 +13,7 @@ const Main = ({ data, setData }) => {
               <Left data={data} setData={setData} />
             </div>
             <div className="main__right">
-              <Right data={data} />
+              <Right data={data} setData={setData} />
             </div>
           </div>
         </div>
