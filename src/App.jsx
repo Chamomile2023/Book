@@ -3,8 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "./components/Header/Header";
-import HeaderBottom from "./components/Header/HeaderBottom";
 import Main from "./components/Main/Main";
+import Modal from './components/Modal/Modal'
 
 const App = () => {
   //Axios
@@ -19,9 +19,9 @@ const App = () => {
   return (
     <>
       <Header search={search} setSearch={setSearch} searchBook={searchBook} />
-      <HeaderBottom data={data} />
       <Routes>
-        <Route path="/" element={<Main data={data} />} />
+        <Route path="/" element={<Main data={data} setData={setData} />} />
+        <Route path="/modal" element={<Modal />} />
       </Routes>
     </>
   );

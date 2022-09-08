@@ -3,14 +3,14 @@ import "./Main.scss";
 import Left from "../Left/Left";
 import Right from "../Right/Right";
 
-const Main = ({ data }) => {
+const Main = ({ data, setData }) => {
   return (
     <>
       <div className="main">
         <div className="container-fluid">
           <div className="main__hero">
             <div className="main__left">
-              <Left data={data} />
+              <Left data={data} setData={setData} />
             </div>
             <div className="main__right">
               <Right data={data} />

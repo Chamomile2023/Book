@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import book from "../assets/book.png";
 
 const Right = ({ data }) => {
-
   return (
     <>
       <div className="right">
@@ -31,7 +30,7 @@ const Right = ({ data }) => {
                         </p>
                       </div>
                       <div className="right__buttons">
-                        <button className="right__buttons--one">Bookmark</button>
+                        <button className="right__buttons--one" onClick={() => { addElement() }}>Bookmark</button>
                         <button className="right__buttons--two">More Info</button>
                         <button className="right__buttons--three"><a href={item.volumeInfo?.previewLink}>Read</a></button>
                       </div>

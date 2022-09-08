@@ -3,7 +3,14 @@ import "./Left.scss";
 import read from "../assets/book-open.svg";
 import deleteIcon from "../assets/delete.svg";
 
-const Left = ({ data }) => {
+const Left = ({ data, setData }) => {
+  const deleteItem = (item) => {
+    const filterItem = data.filter((el) => {
+      return el.id != item
+    })
+    setData(filterItem)
+  }
+
   return (
     <>
       <div className="left">
@@ -19,19 +26,18 @@ const Left = ({ data }) => {
                   return (
                     <div className="left__card">
                       <div className="left__text">
-                        <h3 className="left__text--title">
-                          {element.volumeInfo.title}
-                        </h3>
+                        <h3 className="left__text--title">{element.volumeInfo.title}</h3>
                         <p className="left__text--paragraph">
                           {element.volumeInfo.authors}
                         </p>
                       </div>
                       <div className="left__icons">
-                        <img src={read} alt="" className="left__icons--read" />
+                        <a href={element.volumeInfo?.previewLink}> <img src={read} alt="" className="left__icons--read" /></a>
                         <img
                           src={deleteIcon}
                           alt=""
                           className="left__icons--delete"
+                          onClick={() => { deleteItem(element.id) }}
                         />
                       </div>
                     </div>
