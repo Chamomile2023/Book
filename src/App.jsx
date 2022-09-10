@@ -14,7 +14,12 @@ const App = () => {
   const searchBook = (evt) => {
     if (evt.key === "Enter") {
       axios
-        .get("https://www.googleapis.com/books/v1/volumes?q=" + search + "&key=AIzaSyATMZLqRP0Qn1E6opgWrw1D1CCi2RTQIWA" + "&maxResults=40")
+        .get(
+          "https://www.googleapis.com/books/v1/volumes?q=" +
+            search +
+            "&key=AIzaSyATMZLqRP0Qn1E6opgWrw1D1CCi2RTQIWA" +
+            "&maxResults=40"
+        )
         .then((res) => setData(res.data.items))
         .catch((err) => console.log(err));
     }
@@ -24,7 +29,7 @@ const App = () => {
       <Header search={search} setSearch={setSearch} searchBook={searchBook} />
       <Routes>
         <Route path="/" element={<Main data={data} setData={setData} />} />
-        <Route path="/modal" element={<Modal data={data} />} />
+        {/* <Route path="/modal" element={<Modal data={data} />} /> */}
       </Routes>
       {/* <Modal data={data} /> */}
     </>

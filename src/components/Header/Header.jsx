@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.scss";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/main_logo.svg";
@@ -6,10 +6,11 @@ import Search from "../assets/search.svg";
 import Mode from "../assets/mode.svg";
 
 const Header = ({ search, setSearch, searchBook }) => {
+    const [darkmode, setDarkMode] = useState(false);
 
     return (
         <>
-            <header className="header">
+            <header className={`header ${darkmode ? "#fff" : "dark"}`}>
                 <div className="container-fluid">
                     <div className="header__hero">
                         <div className="header__logo">
@@ -28,7 +29,9 @@ const Header = ({ search, setSearch, searchBook }) => {
                                 className="header__input--input"
                                 placeholder="Search books"
                                 value={search}
-                                onChange={(e) => { setSearch(e.target.value) }}
+                                onChange={(e) => {
+                                    setSearch(e.target.value);
+                                }}
                                 onKeyPress={searchBook}
                             />
                         </div>
