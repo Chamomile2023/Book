@@ -7,10 +7,11 @@ const Right = ({ data, setData }) => {
   const [bookmark, setBookmark] = useState([]);
 
   const addElement = () => {
-    const bookmark = {
+    const newBookmark = {
       id: data.id,
     };
-    setData([...data, bookmark]);
+    setBookmark([...bookmark, newBookmark]);
+    console.log(bookmark);
   };
   return (
     <>
@@ -44,9 +45,7 @@ const Right = ({ data, setData }) => {
                       <div className="right__buttons">
                         <button
                           className="right__buttons--one"
-                          onClick={() => {
-                            addElement();
-                          }}
+                          onClick={() => addElement(item.id)}
                         >
                           Bookmark
                         </button>
